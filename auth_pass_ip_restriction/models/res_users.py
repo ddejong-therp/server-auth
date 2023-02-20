@@ -11,6 +11,6 @@ class ResUsers(models.Model):
         ip_whitelist = self.env["ir.config_parameter"].get_param(
             "auth_restriction.ip_whitelist"
         )
-        if not ip in ip_whitelist:
+        if ip_whitelist and not ip in ip_whitelist:
             raise AccessDenied("IP %s not allowed to authenticate with a password" % ip)
         return super()._check_credentials(password, env)

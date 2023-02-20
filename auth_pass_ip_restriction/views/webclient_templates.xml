@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <template id="login" inherit_id="web.login" priority="1">
+    <template id="login" inherit_id="web.login">
         <xpath expr="//*[hasclass('oe_login_form')]//*[hasclass('field-login')]" position="attributes">
             <attribute name="t-if">debug</attribute>
         </xpath>
